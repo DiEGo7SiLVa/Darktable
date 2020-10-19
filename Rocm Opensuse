@@ -1,0 +1,29 @@
+#1
+sudo zypper addrepo http://repo.radeon.com/rocm/zyp/zypper/ rocm
+
+#2 
+sudo zypper ref
+
+#3 
+sudo rpm --import http://repo.radeon.com/rocm/rocm.gpg.key
+
+#4
+sudo zypper --gpg-auto-import-keys install y rocm-opencl hsa-ext-rocr-dev
+
+#5
+sudo vim /etc/ld.so.conf.d/rocm-opencl.conf 
+
+/opt/rocm/hsa/lib/
+/opt/rocm/lib
+/opt/rocm/lib64
+/opt/rocm/opencl/lib/x86_64
+
+
+#6
+sudo ldconfig
+
+#7
+echo libamdocl64.so > /etc/OpenCL/vendors/amdocl64.icd
+
+#8
+ln -s /opt/rocm-3.8.0 /opt/rocm
