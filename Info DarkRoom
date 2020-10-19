@@ -1,0 +1,1 @@
+$(MAKER) $(MODEL) • $(LENS) • f/$(EXIF_APERTURE) • $(EXIF_FOCAL_LENGTH) mm • $(EXIF_ISO) ISO • $(TITLE)		
