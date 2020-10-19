@@ -27,3 +27,6 @@ echo libamdocl64.so > /etc/OpenCL/vendors/amdocl64.icd
 
 #8
 ln -s /opt/rocm-3.8.0 /opt/rocm
+
+#9
+sudo usermod -a -G video $LOGNAME
