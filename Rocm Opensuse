@@ -1,5 +1,5 @@
 #1 Adicionar o repositório do ROCM
-sudo zypper addrepo http://repo.radeon.com/rocm/zyp/zypper/ rocm
+sudo zypper addrepo http://repo.radeon.com/rocm/zyp/zypper/ ROCm
 
 #2 Atualizar os repositórios
 sudo zypper ref
