@@ -18,15 +18,14 @@ sudo vim /etc/ld.so.conf.d/rocm-opencl.conf
 /opt/rocm/lib64
 /opt/rocm/opencl/lib/x86_64
 
-
-#6 Atuaçozar as configurações
-sudo ldconfig
-
-#7 Aquivo do ROCM
+#6 Aquivo do ROCM
 echo libamdocl64.so > /etc/OpenCL/vendors/amdocl64.icd
 
-#8 Criar link da pasta ROCM 
+#7 Criar link da pasta ROCM 
 sudo ln -s /opt/rocm-3.9.0 /opt/rocm
 
-#9 Adicionar o usúario ao Grupo VIDEO
+#8 Adicionar o usúario ao Grupo VIDEO
 sudo usermod -a -G video $LOGNAME
+
+#9 Atuaçozar as configurações
+sudo ldconfig
