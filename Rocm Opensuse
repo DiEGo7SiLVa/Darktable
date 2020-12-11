@@ -1,11 +1,11 @@
 #1 Adicionar o repositório do ROCM
 sudo zypper addrepo http://repo.radeon.com/rocm/zyp/zypper/ ROCm
 
-#2 Atualizar os repositórios
-sudo zypper ref
-
-#3 Importar a chave GPG(key)
+#2 Importar a chave GPG(key)
 sudo rpm --import http://repo.radeon.com/rocm/rocm.gpg.key
+
+#3 Atualizar os repositórios
+sudo zypper ref
 
 #4 Instalar o ROCM Opencl
 sudo zypper --gpg-auto-import-keys install -y rocm-opencl hsa-ext-rocr-dev
@@ -22,7 +22,7 @@ sudo vim /etc/ld.so.conf.d/rocm-opencl.conf
 echo libamdocl64.so > /etc/OpenCL/vendors/amdocl64.icd
 
 #7 Criar link da pasta ROCM 
-sudo ln -s /opt/rocm-3.9.0 /opt/rocm
+sudo ln -s /opt/rocm-3.10.0 /opt/rocm
 
 #8 Adicionar o usúario ao Grupo VIDEO
 sudo usermod -a -G video $LOGNAME
