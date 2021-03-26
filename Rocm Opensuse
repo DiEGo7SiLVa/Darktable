@@ -22,7 +22,7 @@ sudo vim /etc/ld.so.conf.d/rocm-opencl.conf
 echo libamdocl64.so > /etc/OpenCL/vendors/amdocl64.icd
 
 #7 Criar link da pasta ROCM 
-sudo ln -s /opt/rocm-4.0.0 /opt/rocm
+sudo ln -s /opt/rocm-4.1.0 /opt/rocm
 
 #8 Adicionar o usúario ao Grupo VIDEO
 sudo usermod -a -G video $LOGNAME
